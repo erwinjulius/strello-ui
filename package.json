@@ -1,0 +1,19 @@
+{
+  "name": "strello.-ui",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-less": "~0.5.1",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-uglify": "~0.2.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-bower-task": "~0.2.3",
+    "grunt-contrib-compress": "~0.5.1",
+    "grunt-env": "~0.4.0",
+    "grunt-preprocess": "~2.3.0",
+    "grunt-angular-templates": "~0.3.8",
+    "grunt-karma": "~0.4.5",
+    "ngmin": "~0.4.0"
+  }
+}

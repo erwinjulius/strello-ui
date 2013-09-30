@@ -1,0 +1,16 @@
+{
+  "name": "strello-ui",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "1.0.8",
+    "angular-resource": "1.0.8",
+    "angular-scenario": "1.0.8"
+    
+    
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
