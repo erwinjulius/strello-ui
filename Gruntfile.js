@@ -3,13 +3,6 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    less: {
-      p: {
-        files: {
-          "target/styles.css": "app/**/*.less",
-        }
-      }
-    },
     watch: {
       less: {
         files: ['app/**/*.less'],
@@ -43,6 +36,14 @@ module.exports = function(grunt) {
           livereload: true
         }
       },
+    },
+
+    less: {
+      p: {
+        files: {
+          'target/styles.css': ['app/**/*.less','!app/components/**/*.less'],
+        }
+      }
     },
     uglify: {
       options: {
@@ -92,7 +93,7 @@ module.exports = function(grunt) {
           module: 'app',
           base: 'app'
         },
-        src: ['app/**/*.html', '!app/index.html', '!app/components/*'],
+        src: ['app/**/*.html', '!app/index.html', '!app/components/**/*'],
         dest: 'target/templates.js'
       }
     },
