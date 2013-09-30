@@ -30,7 +30,7 @@ module.exports = function(grunt) {
       },
       js: {
         tasks: ['uglify', 'karma'],
-        files: ['!app/components/*', 'app/**/*.js', 'test/**/*.js'],
+        files: ['app/**/*.js', 'test/**/*.js'],
         options: {
           nospawn: false,
           livereload: true
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
     less: {
       p: {
         files: {
-          'target/styles.css': ['app/**/*.less','!app/components/**/*.less'],
+          'target/styles.css': 'app/**/*.less'
         }
       }
     },
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
       },
       t: {
         files: {
-          'target/app.min.js': ['app/**/*.js','!app/components/**/*.js']
+          'target/app.min.js': 'app/**/*.js'
         }
       }
     },
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
       main: {
         files: [
           // {expand: true, src: ['*/*.html'], dest: 'target/', cwd:'app/'},
-          {expand: true, src: ['**/*'], dest: 'target/components', cwd:'app/components'}
+          {expand: true, src: ['**/*'], dest: 'target/components', cwd:'components'}
         ]
       }
     },
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
           module: 'app',
           base: 'app'
         },
-        src: ['app/**/*.html', '!app/index.html', '!app/components/**/*'],
+        src: ['app/**/*.html', '!app/index.html'],
         dest: 'target/templates.js'
       }
     },

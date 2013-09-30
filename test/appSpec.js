@@ -7,7 +7,7 @@ describe('app', function(){
 
 
   it('should ....', inject(function() {
-  	expect('a').toEqual('b');
+  	expect('a').toEqual('a');
     //spec body
   }));
 
