@@ -1,5 +1,6 @@
 <div ng-repeat="card in cards">
 	<h2>{{card.title}}</h2>
+	<button ng-click="remove(card)">Delete</button>
 </div>
 
 <input type="text" ng-model="title"></input>

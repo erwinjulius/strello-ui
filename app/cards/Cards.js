@@ -9,4 +9,8 @@ app.controller('CardsListCtrl', function($scope, Cards){
 			$scope.cards.push(data);
 		});
 	}
+
+	$scope.remove = function(card){
+		card.$delete();
+	}
 });
