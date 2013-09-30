@@ -101,6 +101,12 @@ module.exports = function(grunt) {
         configFile: 'config/karma.conf.js',
         singleRun: true
       }
+    },
+    bower: {
+      install: {
+        // targetDir: './app/components'
+        verbose: true
+      }
     }
   });
 
@@ -114,6 +120,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-preprocess');
   grunt.loadNpmTasks('grunt-angular-templates');
   grunt.loadNpmTasks('grunt-karma');
+  grunt.loadNpmTasks('grunt-bower-task');
 
   grunt.registerTask('default', ['clean', 'less', 'uglify', 'copy', 'preprocess:all', 'compress']);
   grunt.registerTask('dev', ['clean', 'less', 'uglify', 'copy', 'env:dev', 'preprocess:all']);
