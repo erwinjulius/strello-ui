@@ -3,12 +3,9 @@ app.controller('CardsListCtrl', function($scope, Cards){
 	$scope.cards = Cards.query();
 
 	$scope.create = function(title){
-		Cards.save({
-			id:-1,
-			title:title
-		}, function ok(data){
-			$scope.cards.push(data);
-		});
+		var newCard = new Cards({id:-1, title:title});
+		newCard.$save();
+		$scope.cards.push(newCard);
 	};
 
 	$scope.remove = function(card){

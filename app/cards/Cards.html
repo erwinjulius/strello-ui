@@ -1,6 +1,7 @@
 <div class="status-group">
 
-	<div ng-repeat="card in cards" class="well">
+	<div ng-repeat="card in cards"
+		class="well card">
 		<span
 			ng-click="editing=true"
 			ng-show="!editing">{{card.title}}</span>
@@ -11,12 +12,12 @@
 			ng-show="editing"
 			type="button"
 			aria-hidden="true"
-			ng-click="editing=false;card.save();">Save</button>
+			ng-click="editing=false;card.$update();">Save</button>
 		<button
 			type="button"
 			class="close"
 			aria-hidden="true"
-			ng-click="remove(card)">&times;</button>
+			ng-click="remove(card);">&times;</button>
 	</div>
 
 	<div class="add-card" ng-click="showCreateNew=true">

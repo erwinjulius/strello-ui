@@ -22,11 +22,12 @@ describe('Cards', function(){
 		expect(scope.cards).toEqual([]);
 
 		httpBackend.flush();
-		
+
 		expect(scope.cards).toEqualData(testData);
 	});
 
 	it('create', function(){
+		httpBackend.flush();
 		httpBackend.expectPOST('/api/cards', {id:-1, title:'1'}).respond(200, {id:1, title:'1'});
 
 		scope.create('1');
@@ -37,10 +38,9 @@ describe('Cards', function(){
 	});
 
 	it('delete', function(){
+		httpBackend.flush();
 		httpBackend.expectDELETE('/api/cards/1').respond(200);
-
-		scope.cards = testData;
-
+		
 		scope.remove(scope.cards[0]);
 
 		httpBackend.flush();
@@ -48,7 +48,13 @@ describe('Cards', function(){
 	});
 
 	it('saves', function(){
-		
+		httpBackend.flush();
+		var card = scope.cards[0];
+		card.title = "2";
 
+		httpBackend.expectPUT('/api/cards/1', {id:1, title:'2'}).respond(202);
+
+		card.$update();
+		httpBackend.flush();
 	});
 });
