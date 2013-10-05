@@ -12,6 +12,7 @@ app.controller('CardsListCtrl', function($scope, Cards){
 	};
 
 	$scope.remove = function(card){
-		Cards.remove(card);
+		Cards.remove({}, card);
+		$scope.cards = _.without($scope.cards, card);
 	};
 });

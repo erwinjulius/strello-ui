@@ -6,7 +6,8 @@
     "angular-resource": "1.0.8",
     "angular-scenario": "1.0.8",
     "angular-mocks": "1.0.8",
-    "bootstrap": "~3.0.0"
+    "bootstrap": "~3.0.0",
+    "underscore": "~1.5.2"
   },
   "ignore": [
     "**/.*",

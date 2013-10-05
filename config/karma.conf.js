@@ -8,6 +8,7 @@ module.exports = function(config) {
       'components/angular/angular.js',
       'components/angular-resource/angular-resource.js',
       'components/angular-mocks/angular-mocks.js',
+      'components/underscore/underscore.js',
 
       'app/**/*.js',
       

@@ -1,7 +1,15 @@
+<div class="">
+
 <div ng-repeat="card in cards">
 	<h2>{{card.title}}</h2>
-	<button ng-click="remove(card)">Delete</button>
+	<button
+		type="button"
+		class="close"
+		aria-hidden="true"
+		ng-click="remove(card)">&times;</button>
 </div>
 
 <input type="text" ng-model="title"></input>
 <button ng-click="create(title);">Add</button>
+
+</div>

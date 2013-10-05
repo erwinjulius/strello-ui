@@ -36,7 +36,7 @@ describe('Cards', function(){
 		expect(scope.cards).toEqualData([{id:1, title:'bla'},{id:1,title:'1'}]);
 	});
 
-	it('deletes', function(){
+	it('delete', function(){
 		httpBackend.expectDELETE('/api/cards/1').respond(200);
 
 		scope.cards = testData;
@@ -44,5 +44,6 @@ describe('Cards', function(){
 		scope.remove(scope.cards[0]);
 
 		httpBackend.flush();
+		expect(scope.cards).toEqual([]);
 	});
 });
