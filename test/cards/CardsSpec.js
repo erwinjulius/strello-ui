@@ -46,4 +46,9 @@ describe('Cards', function(){
 		httpBackend.flush();
 		expect(scope.cards).toEqual([]);
 	});
+
+	it('saves', function(){
+		
+
+	});
 });

@@ -1,25 +1,32 @@
 <div class="status-group">
 
-<div ng-repeat="card in cards" class="well">
-	<span
-		ng-click="editing=true"
-		ng-show="!editing">{{card.title}}</span>
-	<textarea ng-model="card.title"
-		class="form-control"
-		ng-if="editing"></textarea>
-	<button
-		ng-if="editing"
-		type="button"
-		aria-hidden="true"
-		ng-click="">Save</button>
-	<button
-		type="button"
-		class="close"
-		aria-hidden="true"
-		ng-click="remove(card)">&times;</button>
-</div>
+	<div ng-repeat="card in cards" class="well">
+		<span
+			ng-click="editing=true"
+			ng-show="!editing">{{card.title}}</span>
+		<textarea ng-model="card.title"
+			class="form-control"
+			ng-show="editing"></textarea>
+		<button
+			ng-show="editing"
+			type="button"
+			aria-hidden="true"
+			ng-click="editing=false;card.save();">Save</button>
+		<button
+			type="button"
+			class="close"
+			aria-hidden="true"
+			ng-click="remove(card)">&times;</button>
+	</div>
 
-<input type="text" ng-model="title"></input>
-<button ng-click="create(title);">Add</button>
-
+	<div class="add-card" ng-click="showCreateNew=true">
+		<span>Add a card...</span>
+		<input type="text"
+			ng-model="title"
+			class="form-control"
+			ng-show="showCreateNew"></input>
+		<button ng-click="showCreateNew=false;$event.stopPropagation();create(title);title='';"
+			ng-show="showCreateNew"
+			>Add</button>
+	</div>
 </div>
