@@ -1,4 +1,7 @@
 'use strict';
 app.factory('Cards', function($resource){
-	return $resource('/api/cards/:id', {id:'@id'});
+	return $resource('/api/cards/:id', {},{
+		save:{method:'POST'},
+		remove:{method:'DELETE', params:{id:'@id'}}
+	});
 });
