@@ -1,9 +1,9 @@
 <div class="status-group">
 
 	<div ng-repeat="card in cards"
-		class="well card">
+		class="well card"
+		ng-click="editing=true">
 		<span
-			ng-click="editing=true"
 			ng-show="!editing">{{card.title}}</span>
 		<textarea ng-model="card.title"
 			class="form-control"
@@ -12,7 +12,7 @@
 			ng-show="editing"
 			type="button"
 			aria-hidden="true"
-			ng-click="editing=false;card.$update();">Save</button>
+			ng-click="editing=false;card.$update();$event.stopPropagation();">Save</button>
 		<button
 			type="button"
 			class="close"
