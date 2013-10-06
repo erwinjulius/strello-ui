@@ -1,9 +1,29 @@
 .status-group{
-	width: 10em;
+	width: 15em;
 	background-color: rgb(240, 240, 240);
 	padding: 5px;
+	.card{
+		position: relative;
+		button.close{
+			position: absolute;
+			top: 0px;
+			right: 5px;
+		}
+		input[type="text"]{
+			background-color: inherit;
+			border:none;
+			-webkit-box-shadow:none;
+			box-shadow: none;
+			&:focus{
+				background-color: white;
+			}
+		}
+	}
 
 	.add-card{
+		a{
+			color: #868686;
+		}
 		&:hover{
 			background-color: rgb(230,230,230);
 		}

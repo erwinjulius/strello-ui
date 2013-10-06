@@ -19,22 +19,22 @@ describe('Cards', function(){
 
 
 	it('fetch cards on init', function() {
-		expect(scope.cards).toEqual([]);
+		expect(scope.cards).toEqualData([]);
 
 		httpBackend.flush();
 
 		expect(scope.cards).toEqualData(testData);
 	});
 
-	it('create', function(){
+	it('add', function(){
 		httpBackend.flush();
-		httpBackend.expectPOST('/api/cards', {id:-1, title:'1'}).respond(200, {id:1, title:'1'});
+		httpBackend.expectPOST('/api/cards', {id:-1, title:''}).respond(200, {id:2, title:''});
 
-		scope.create('1');
+		scope.add();
 
 		httpBackend.flush();
 
-		expect(scope.cards).toEqualData([{id:1, title:'bla'},{id:1,title:'1'}]);
+		expect(scope.cards).toEqualData([{id:1, title:'bla'},{id:2,title:''}]);
 	});
 
 	it('delete', function(){

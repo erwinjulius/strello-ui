@@ -1,14 +1,14 @@
 {
   "name": "angular-resource",
-  "version": "1.0.8",
+  "version": "1.2.0-rc.2",
   "main": "./angular-resource.js",
   "dependencies": {
-    "angular": "1.0.8"
+    "angular": "1.2.0-rc.2"
   },
-  "gitHead": "57119c33a79e9343daf0f50e58f8b73cf234bffb",
+  "gitHead": "b2ad0c6b7feaf468749d56973a5221d2ee89f6c1",
   "readme": "bower-angular-resource\n======================\n\nangular-resource bower repo",
   "readmeFilename": "README.md",
-  "_id": "angular-resource@1.0.8",
+  "_id": "angular-resource@1.2.0-rc.2",
   "description": "bower-angular-resource ======================",
   "repository": {
     "type": "git",
