@@ -11,6 +11,9 @@ module.exports = function(config) {
       'components/angular-route/angular-route.js',
       'components/underscore/underscore.js',
       'components/angular-elastic/elastic.js',
+      'components/jquery/jquery.min.js',
+      'components/jquery-ui/ui/jquery-ui.js',
+      'components/angular-ui-sortable/src/sortable.js',
 
       'app/**/*.js',
       
