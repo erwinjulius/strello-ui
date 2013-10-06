@@ -1,0 +1,22 @@
+{
+  "name": "angular-elastic",
+  "version": "2.1.0",
+  "main": "elastic.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "angular": ">=1.0.6"
+  },
+  "gitHead": "6da26eed69aa41c92907e6c639a868ec2ed297ab",
+  "readme": "Angular Elastic\n===============\n\nElastic (autosize) textareas for AngularJS, without jQuery dependency.\n\n[See it in action](http://monospaced.github.io/angular-elastic).\n\nUsage\n-----\n\nas attribute\n\n    <textarea msd-elastic ng-model=\"foo\">\n      ...\n    </textarea>\n\nas class\n\n    <textarea class=\"msd-elastic\" ng-model=\"bar\">\n      ...\n    </textarea>\n\noptionally append whitespace to the end of the height calculation (an extra newline improves the apperance when animating)\n\n    <textarea msd-elastic=\"\\n\" ng-model=\"foo\">\n      ...\n    </textarea>\n\n    <textarea class=\"msd-elastic: \\n;\" ng-model=\"bar\">\n      ...\n    </textarea>\n\nor configure whitespace globally\n\n    app.config(['msdElasticConfig', function(config) {\n      config.append = '\\n\\n';\n    }])\n\nInstall\n-------\n\n    bower install angular-elastic\n\nInclude the `elastic.js` script provided by this component in your app, and add `monospaced.elastic` to your app’s dependencies.\n\nSupport\n-------\n\n__Modern browsers__ only—Internet Explorer 6, 7 & 8 retain their default textarea behaviour.\n\nDemo\n----------------\n\n[monospaced.github.io/angular-elastic](http://monospaced.github.io/angular-elastic)\n\nInspiration\n----------------\n\n* [jQuery Autosize](http://www.jacklmoore.com/autosize/)\n\n* [jQuery Elastic](http://unwrongest.com/projects/elastic/)\n\n",
+  "readmeFilename": "README.md",
+  "_id": "angular-elastic@2.1.0",
+  "description": "Angular Elastic ===============",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/monospaced/angular-elastic.git"
+  }
+}

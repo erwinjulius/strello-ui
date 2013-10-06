@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('app',['ngResource', 'ngRoute']).
+var app = angular.module('app',['ngResource', 'ngRoute', 'monospaced.elastic']).
 	config(['$routeProvider', function($routeProvider) {
 		$routeProvider.when('/cards', {
 			templateUrl: 'cards/Cards.html',

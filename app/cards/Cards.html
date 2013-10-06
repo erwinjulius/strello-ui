@@ -2,12 +2,15 @@
 
 	<div ng-repeat="card in cards"
 		class="well card">
-		<input type="text"
+		<textarea
+			rows="1"
 			ng-model="card.title"
 			class="form-control"
 			ng-blur="card.$update();"
 			ng-keyup="press($event, $elm);"
-			></input>
+			msd-elastic
+			focus-me="card.id==-1"
+			></textarea>
 		<button
 			type="button"
 			class="close"
@@ -15,7 +18,7 @@
 			ng-click="remove(card);">&times;</button>
 	</div>
 
-	<div class="add-card" ng-click="showCreateNew=true">
+	<div class="add-card">
 		<a href="#" ng-click="add();$event.preventDefault();">Add a card...</a>
 	</div>
 </div>

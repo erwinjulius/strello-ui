@@ -10,6 +10,7 @@ module.exports = function(config) {
       'components/angular-mocks/angular-mocks.js',
       'components/angular-route/angular-route.js',
       'components/underscore/underscore.js',
+      'components/angular-elastic/elastic.js',
 
       'app/**/*.js',
       
