@@ -3,4 +3,4 @@ strello-ui
 
 simple notes tool
 
-![screenshot](screenshot.png)
+![screenshot](/screenshot.png)
